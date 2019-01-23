@@ -47,7 +47,7 @@
     font-style: normal;
     font-weight: 300;
     line-height: normal;
-    font-size: 50px;
+    font-size: 3.125em;
     text-align: center;
     letter-spacing: 1px;
     color: #fff;
@@ -94,10 +94,11 @@
     font-family: @base-font;
     font-style: normal;
     font-weight: 300;
-    line-height: 34px;
-    font-size: 24px;
+    line-height: 1.583em;
+    font-size: 1.5em;
     text-align: center;
     letter-spacing: 1px;
+    color: #FFFFFF;
 }
 
 .p-features-mix() {
@@ -158,9 +159,16 @@
     color: @p-cl;
 }
 
-
-.nav-padding() {
-  padding-left: 1.875rem;
-  padding-right: 1.875rem;
+.cta-btn-mix () {
+    .btn-text-mix();
+   background-color: @accent-cl;
+   padding: 0.750em 0;
+   width: 240px;
+   box-shadow: 0px 2px 2px rgba(127, 32, 2, 0.475175);
+   border-radius: 5px;
 }
 
+.content-width-mix() {
+    max-width: @content-max-width;
+    margin: auto;
+}
