@@ -11,6 +11,7 @@
 # production
 /build
 src/**/*.css
+src/*.css
 
 # misc
 .DS_Store
