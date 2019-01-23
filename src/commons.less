@@ -1,0 +1,178 @@
+/*
+==============================================
+Fonts Installation
+==============================================
+*/
+
+@import url('https://fonts.googleapis.com/css?family=Lato');
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+
+
+// ==============================================
+// Variables
+// ==============================================
+
+
+// Layout
+@nav-width: 270px;
+@form-active-width: 44.875em;
+@textarea-width: 32.875em;
+
+// Color variables
+
+@accent-cl: #FF7043;
+@main-cl:  #039BE5;
+@base-cl: #6B7C93;
+@p-cl: #6B7C93; 
+@h3-cl:  #6B7C93;
+@tiles-head-cl: #016CB7;
+@placeholder-cl: #9BA9BB;
+
+
+// ==============================================
+// Typography
+// ==============================================
+
+
+// Font size variables
+
+// Typography variables
+@base-font: 'Lato', sans-serif;
+@accent-font:  'Montserrat', sans-serif;
+
+
+// ==============================================
+// Mixins
+// ==============================================
+
+.h1-mix(@color: @main-cl) {
+    font-family: @accent-font;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    font-size: 62px;
+    letter-spacing: 1px;
+}
+
+.h2-mix() {
+    font-family: @accent-font;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    font-size: 50px;
+    text-align: center;
+    letter-spacing: 1px;
+    color: #fff;
+}
+
+.h3-mix() {
+    font-family: @accent-font;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    font-size: 24px;
+    letter-spacing: 0.74px;
+    color: @h3-cl;
+}
+
+.h3-contact-mix() {
+    font-family: @accent-font;
+    font-style: normal;
+    font-weight: normal;
+    line-height: normal;
+    font-size: 28px;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+.placeholder-text-mix() {
+    font-family: @base-font;
+    font-style: normal;
+    font-weight: normal;
+    line-height: normal;
+    font-size: 16px;
+    color: @placeholder-cl;
+}
+
+.h4-tiles-mix() {
+    font-family: @accent-font;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    font-size: 16px;
+}
+
+.p-description-mix() {
+    font-family: @base-font;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 34px;
+    font-size: 24px;
+    text-align: center;
+    letter-spacing: 1px;
+}
+
+.p-features-mix() {
+    font-family: @base-font;
+    font-style: normal;
+    font-weight: normal;
+    line-height: 32px;
+    font-size: 16px;
+    letter-spacing: 0.74px;  
+    color: #6B7C93;
+}
+
+.p-tiles-mix() {
+    font-family: @base-font;
+    font-style: normal;
+    font-weight: normal;
+    line-height: 21px;
+    font-size: 16px;
+
+    color: #6B7C93;
+}
+
+.nav-text-mix() {
+    font-family: @base-font;
+    font-style: normal;
+    font-weight: normal;
+    line-height: normal;
+    font-size: 16px;
+    color: #FFFFFF;
+}
+
+.btn-text-mix() {
+    font-family: @base-font;
+    font-style: normal;
+    font-weight: normal;
+    line-height: normal;
+    font-size: 20px;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+.footer-text-mix() {
+    font-family: @base-font;
+    font-style: normal;
+    font-weight: normal;
+    line-height: normal;
+    font-size: 16px;
+    text-align: right;
+    color: @main-cl;
+}
+
+.copyright-text-mix() {
+    font-family: @base-font;
+    font-style: normal;
+    font-weight: normal;
+    line-height: normal;
+    font-size: 14px;
+    color: @p-cl;
+}
+
+
+.nav-padding() {
+  padding-left: 1.875rem;
+  padding-right: 1.875rem;
+}
+
