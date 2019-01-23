@@ -12,6 +12,7 @@
 /build
 src/**/*.css
 src/*.css
+to-mixins.txt
 
 # misc
 .DS_Store
