@@ -13,7 +13,7 @@
     "watch-less": "react-less-watcher -d src",
     "start-js": "react-scripts start",
     "start": "npm-run-all -p watch-less start-js",
-    "build": "npm run watch-less && react-scripts build",
+    "build": "gulp buildLess && react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
@@ -27,6 +27,8 @@
     "not op_mini all"
   ],
   "devDependencies": {
-    "less": "^3.9.0"
+    "gulp": "^4.0.0",
+    "less": "^3.9.0",
+    "less-recursive-compiler": "^1.0.3"
   }
 }
