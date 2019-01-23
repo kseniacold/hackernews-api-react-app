@@ -1,28 +1,25 @@
 @import './../commons.less';
 
-.header {
+.Header {
     display: flex;
-    max-width: @content-max-width;
-
-    margin: auto;
     padding-top: 0.875em;
+
+    .content-width-mix();
 }
 
-.header__logo {
+.Header__logo {
     margin-right: 2.5em;
 }
 
-
-.header__nav {
+.Header__nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
     width: 100%;
-
-    .nav-text-mix();
+    .nav-text-mix();  
 }
 
-.nav_left, .nav_right {
+.Header__nav-left, .Header__nav-right {
     display: flex;
     align-items: center;
 }

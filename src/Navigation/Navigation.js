@@ -5,12 +5,12 @@ import './Navigation.css';
 class Navigation extends Component {
   render() {
     return (
-        <header className="header">
-            <div className="header__logo logo">
-                <img src={logo} className="logo__img" alt="Sure App Logo" />
+        <header className="Header">
+            <div className="Header__logo">
+                <img src={logo} className="Header__logo-img" alt="Sure App Logo" />
             </div>
-            <nav className="header__nav">
-                <ul className="nav_right">
+            <nav className="Header__nav nav">
+                <ul className="Header__nav-right">
                     <li className="nav__item nav__item_dropdown">
                         <a href="/" className="nav__link">Products</a>
                         <img className="dropdown-icon" src="" alt="" />
@@ -22,7 +22,7 @@ class Navigation extends Component {
                         <a href="/" className="nav__link">Claims</a>
                     </li>
                 </ul>
-                <ul className="nav_left">
+                <ul className="Header__nav-left">
                     <li className="nav__item">
                         <a href="/" className="nav__link">Download App</a>
                     </li>
