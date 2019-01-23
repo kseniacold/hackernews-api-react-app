@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import logo from './../logo.svg';
+import './Navigation.css';
 
 class Navigation extends Component {
   render() {
@@ -12,7 +13,7 @@ class Navigation extends Component {
                 <ul className="nav_right">
                     <li className="nav__item nav__item_dropdown">
                         <a href="/" className="nav__link">Products</a>
-                        <img className="dropdown-icon" src="" />
+                        <img className="dropdown-icon" src="" alt="" />
                     </li>
                     <li className="nav__item">
                         <a href="/" className="nav__link">Support</a>
