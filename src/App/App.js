@@ -1,24 +1,21 @@
 import React, { Component } from 'react';
-import Hero from '../Hero/Hero';
-import Clients from '../Clients/Clients';
-import Solutions from '../Solutions/Solutions';
-import Policies from '../Policies/Policies';
-import Contact from '../Contact/Contact';
-import Footer from '../Footer/Footer';
+import LandingPage from '../LandingPage/LandingPage';
+import HackerNews from '../HackerNews/HackerNews';
+import { BrowserRouter as Router, Route} from 'react-router-dom';
+
+
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <Hero />
-        <Clients />
-        <Solutions />
-        <Policies />
-        <Contact />
-        <Footer />
-      </div>
+        <Router>
+           <div className="App">
+              <Route path="/" exact component={LandingPage} />
+              <Route path="/hacker-news" exact component={HackerNews} />
+            </div>   
+        </Router>
     );
-  }
+  } 
 }
 
 export default App;
