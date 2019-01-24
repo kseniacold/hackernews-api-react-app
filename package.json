@@ -29,6 +29,7 @@
   "devDependencies": {
     "gulp": "^4.0.0",
     "less": "^3.9.0",
-    "less-recursive-compiler": "^1.0.3"
+    "less-recursive-compiler": "^1.0.3",
+    "lesshat": "^4.1.0"
   }
 }
