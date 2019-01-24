@@ -1,0 +1,70 @@
+@import './../commons.less';
+
+.Policies {
+  // TODO fancy bg
+  background-color: @main-cl;
+}
+
+.Policies__content {
+  .content-width-mix();
+    text-align: center;
+
+    padding: 6.375em 4.5em;
+}
+
+.Policies__heading {
+  .h2-policies-mix();
+
+  margin-bottom: 1.545em;
+}
+
+.Policies__row {
+  display: flex;
+  width: 100%;
+
+  justify-content: space-between;
+
+  &:not(:last-child) {
+    margin-bottom: 3.125rem;
+  }
+}
+
+.Policies__row_one-item {
+  justify-content: center;
+}
+
+.Policies__box {
+  background-color: #FFFFFF;
+  box-shadow: 0px 4px 18px rgba(0, 0, 0, 0.209352);
+  border-radius: 4px;
+  width: 50%;
+
+  display: flex;
+  padding: 2.188rem;
+}
+
+.Policies__box_right {
+  margin-left: 1.563rem;
+}
+
+.Policies__box_left {
+  margin-right: 1.563rem;
+}
+
+.Policies__box-text {
+  padding-left: 1.750rem;
+  padding-top: 0.625rem;
+}
+
+.Policies__box-heading {
+  .h4-policies-mix();
+
+  text-align: left;
+  margin-bottom: 0.875rem;
+}
+
+.Policies__box-description {
+  .p-policies-mix();
+
+  text-align: left;
+}

@@ -1,3 +1,5 @@
+@import './../node_modules/lesshat/lesshat.less';
+
 // ==============================================
 // Variables
 // ==============================================
@@ -13,8 +15,12 @@
 @base-cl: #6B7C93;
 @p-cl: #6B7C93; 
 @h3-cl:  #6B7C93;
-@tiles-head-cl: #016CB7;
+
+@clients-bg: #F6F9FC;
+
+@policies-head-cl: #016CB7;
 @placeholder-cl: #9BA9BB;
+
 
 
 // ==============================================
@@ -38,8 +44,9 @@
     font-style: normal;
     font-weight: 300;
     line-height: normal;
-    font-size: 62px;
+    font-size: 3.875em;
     letter-spacing: 1px;
+    color: @color;
 }
 
 .h2-mix() {
@@ -53,12 +60,23 @@
     color: #fff;
 }
 
+.h2-policies-mix() {
+    font-family: @accent-font;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 1.227em;
+    font-size: 2.750em;
+    text-align: center;
+    letter-spacing: 1px;
+    color: #FFFFFF;
+}
+
 .h3-mix() {
     font-family: @accent-font;
     font-style: normal;
     font-weight: 600;
     line-height: normal;
-    font-size: 24px;
+    font-size: 1.500em;
     letter-spacing: 0.74px;
     color: @h3-cl;
 }
@@ -82,12 +100,13 @@
     color: @placeholder-cl;
 }
 
-.h4-tiles-mix() {
+.h4-policies-mix() {
     font-family: @accent-font;
     font-style: normal;
     font-weight: 500;
     line-height: normal;
-    font-size: 16px;
+    font-size: 1em;
+    color: @main-cl;
 }
 
 .p-description-mix() {
@@ -111,12 +130,12 @@
     color: #6B7C93;
 }
 
-.p-tiles-mix() {
+.p-policies-mix() {
     font-family: @base-font;
     font-style: normal;
     font-weight: normal;
-    line-height: 21px;
-    font-size: 16px;
+    line-height: 1.313em;
+    font-size: 1em;
 
     color: #6B7C93;
 }
@@ -166,6 +185,7 @@
    width: 240px;
    box-shadow: 0px 2px 2px rgba(127, 32, 2, 0.475175);
    border-radius: 5px;
+//    .border-radius(5px);
 }
 
 .content-width-mix() {
