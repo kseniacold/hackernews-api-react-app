@@ -7,13 +7,16 @@
     "react": "^16.7.0",
     "react-dom": "^16.7.0",
     "react-less-watcher": "^1.1.4",
+    "react-router": "^4.3.1",
+    "react-router-dom": "^4.3.1",
     "react-scripts": "2.1.3"
   },
   "scripts": {
-    "watch-less": "react-less-watcher -d src",
+    "watch-less": "gulp watchLess",
     "start-js": "react-scripts start",
     "start": "npm-run-all -p watch-less start-js",
-    "build": "gulp buildLess && react-scripts build",
+    "build": "build-less && react-scripts build",
+    "build-less": "gulp buildLess",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
