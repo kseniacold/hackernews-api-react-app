@@ -1,4 +1,5 @@
-import React, { Component } from 'react';
+import React from 'react';
+
 import petIcon  from './Pet_icon.svg';
 import propIcon from './Property_icon.svg';
 import travelIcon from './Travel_icon.svg';
@@ -12,10 +13,8 @@ const backgroundImgStyle = {
   backgroundImage: 'url(' + backgroundImage + ')'
 };
 
-class Policies extends Component {
-  render() {
-    return (
-       <div style={backgroundImgStyle} className="Policies">
+const Policies = () => (
+  <div style={backgroundImgStyle} className="Policies">
         <div className="Policies__content">
           <h2 className="Policies__heading">
           Our partners come in all shapes and sizes, just like our policies.
@@ -69,8 +68,6 @@ class Policies extends Component {
 
         </div>
        </div>
-    );
-  }
-}
+);
 
 export default Policies;
