@@ -1,0 +1,49 @@
+@import './../commons.less';
+
+.Footer {
+  background-color: #FFFFFF;
+  padding: 3.750rem 0;
+}
+
+.Footer__content {
+  .content-width-mix();
+  display: flex;
+  align-items: center;
+}
+
+.Footer__logo {
+  margin-right: 1.875em;
+}
+
+.Footer__copyright {
+  .copyright-text-mix();
+  margin-right: 3.500em;
+  min-width: 10em;
+}
+
+.Footer__nav {
+  display: flex;
+  width: 100%;
+
+  justify-content: flex-end;
+}
+
+.Footer__nav-list {
+  display: flex;
+}
+
+.Footer__nav-item {
+  margin-right: 1.250rem;
+}
+
+.Footer__sm-icon {
+  &:not(:last-child) {
+    margin-right: 1.250rem;
+  }
+}
+
+
+
+.Footer__nav-link {
+  .footer-text-mix();
+}

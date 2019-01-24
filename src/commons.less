@@ -86,7 +86,7 @@
     font-style: normal;
     font-weight: normal;
     line-height: normal;
-    font-size: 28px;
+    font-size: 1.750em;
     text-align: center;
     color: #FFFFFF;
 }
@@ -96,7 +96,7 @@
     font-style: normal;
     font-weight: normal;
     line-height: normal;
-    font-size: 16px;
+    font-size: 1em;
     color: @placeholder-cl;
 }
 
@@ -140,13 +140,13 @@
     color: #6B7C93;
 }
 
-.nav-text-mix() {
+.nav-text-mix(@color: #FFFFFF) {
     font-family: @base-font;
     font-style: normal;
     font-weight: normal;
     // line-height: normal;
     font-size: 1em;
-    color: #FFFFFF;
+    color: @color;
 }
 
 .btn-text-mix() {
@@ -164,8 +164,7 @@
     font-style: normal;
     font-weight: normal;
     line-height: normal;
-    font-size: 16px;
-    text-align: right;
+    font-size: 1em;;
     color: @main-cl;
 }
 
@@ -174,11 +173,11 @@
     font-style: normal;
     font-weight: normal;
     line-height: normal;
-    font-size: 14px;
+    font-size: 0.875em;
     color: @p-cl;
 }
 
-.cta-btn-mix () {
+.cta-btn-mix() {
     .btn-text-mix();
    background-color: @accent-cl;
    padding: 0.750em 0;

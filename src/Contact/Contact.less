@@ -1,0 +1,51 @@
+@import './../commons.less';
+
+.Contact {
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  background-color: #6B7C93;
+  background-blend-mode: multiply;
+  mix-blend-mode: normal;
+  opacity: 0.84;
+
+  padding: 6.250rem 0;
+  text-align: center;
+}
+
+.Contact__heading {
+  .h3-contact-mix();
+
+  margin-bottom: 2.125rem;
+}
+
+.Contact__form {
+  max-width: 32.250rem;
+  margin: auto;
+}
+
+.Contact__form-field {
+  display: block;
+  width: 100%;
+
+  background: #FFFFFF;
+  border: 1px solid #DADFE9;
+  box-sizing: border-box;
+  border-radius: 5px;
+  padding: 15px; 
+
+  &::-webkit-input-placeholder {
+    .placeholder-text-mix();
+  }
+
+  &:not(:last-child) {
+    margin-bottom: 0.625rem;
+  }
+}
+
+.Contact__btn-submit {
+  .cta-btn-mix();
+  width: 100%;
+
+  margin-top: 0.750rem;
+}

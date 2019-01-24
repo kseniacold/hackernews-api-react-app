@@ -4,13 +4,18 @@ import propIcon from './Property_icon.svg';
 import travelIcon from './Travel_icon.svg';
 import homeIcon from './Home_icon.svg';
 import eventIcon from './Event_icon.svg';
+import backgroundImage from './blue-bg_bottom.svg';
 
 import './Policies.css';
+
+const backgroundImgStyle = {
+  backgroundImage: 'url(' + backgroundImage + ')'
+};
 
 class Policies extends Component {
   render() {
     return (
-       <div className="Policies">
+       <div style={backgroundImgStyle} className="Policies">
         <div className="Policies__content">
           <h2 className="Policies__heading">
           Our partners come in all shapes and sizes, just like our policies.
