@@ -1,4 +1,6 @@
+const { spawn } = require('child_process');
 const gulp = require('gulp');
+const less = require('less');
 
 // The `clean` function is not exported so it can be considered a private task.
 // It can still be used within the `series()` composition.
@@ -25,11 +27,19 @@ function buildLess(cb) {
   cb();
 }
 
+// TODO clean this up
 function watchLess(cb) {
   gulp.watch(
-    [lessDirPath+'/*.less', lessDirPath+'/**/*.less'],
-    buildLess
+    [lessDirPath+'/**/*.less'],
+    function(cb){cb()}
   )
+  .on('change', function(path, stats){
+    //console.log('File ' + path + ' was changed');
+    let outPath = path.replace('.less', '.css');
+    let cmd = `/usr/bin/lessc ${path} ${outPath}`;
+    console.log(`Running ${cmd}`);
+    // spawn(cmd);
+  })
 }
 
 gulp.task('buildLess', buildLess);
