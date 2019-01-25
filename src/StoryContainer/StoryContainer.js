@@ -19,7 +19,7 @@ class StoryContainer extends Component {
   // subscribe() returns a function for unregistering the listener
   // keep the handle to call when component unmounts
   unsubscribe = this.props.store.subscribe(() => {
-    let _story = this._getStoryWithisBookmarked(this.state.story);
+    let _story = this._getStoryWithIsBookmarked(this.state.story);
 
     this.setState({
       story: _story
@@ -32,7 +32,7 @@ class StoryContainer extends Component {
     fetch(fetchUrl)
       .then(response => response.json())
       .then(story => { 
-        let _story = this._getStoryWithisBookmarked(story);
+        let _story = this._getStoryWithIsBookmarked(story);
         this.setState({story: _story });
       });
   }
@@ -42,7 +42,7 @@ class StoryContainer extends Component {
    * By returning a new object containing the original storyObj
    * with isBookmarked field
    */
-  _getStoryWithisBookmarked = (storyObj) => {
+  _getStoryWithIsBookmarked = (storyObj) => {
     let _storyId = this.props.storyId;
     let _isBookmarked = this.props.store.getState().bookmarkedStories.indexOf(_storyId) !== -1;
 

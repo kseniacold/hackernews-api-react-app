@@ -24,7 +24,7 @@ class StoriesContainer extends Component {
     });
   });
 
-  componentDidMount() { 
+  componentDidMount() {
     if (!this.state.stories || this.state.stories.length === 0) {
       fetch('https://hacker-news.firebaseio.com/v0/topstories.json')
       .then(response => response.json())
