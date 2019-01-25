@@ -64,7 +64,7 @@ class StoryContainer extends Component {
   render() {
     return ( this.state.story ?
       <Story story={this.state.story} bookmark={this.bookmark} unbookmark={this.unbookmark} /> :
-      <div className="loading">...</div>
+      <div className="loading"></div>
     );
   }
 }

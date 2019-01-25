@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import StoryContainer from '../StoryContainer/StoryContainer';
 
+import './Stories.css';
+
 class Stories extends Component {
   render() {
     const _store = this.props.store;

@@ -4,7 +4,7 @@ import StoriesContainer from '../StoriesContainer/StoriesContainer';
 
 const HackerNews = ({store}) => (
   <div className="HackerNews">
-    <HNHeader />
+    <HNHeader top100isSelected={true} />
     <StoriesContainer store={store} />
   </div>
 );

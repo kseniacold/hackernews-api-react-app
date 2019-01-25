@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Stories from '../Stories/Stories';
+import Loader from '../Loader/Loader';
 
 import {
   setStories
@@ -13,7 +14,7 @@ class StoriesContainer extends Component {
       stories: null
     };
   }
-
+  
   MAX_STORIES = 100;
   // Upddate component state every time the Store gets updated 
   // subscribe() returns a function for unregistering the listener
@@ -42,7 +43,7 @@ class StoriesContainer extends Component {
   render() {
     return ( this.state.stories ?
       <Stories stories={this.state.stories} store={this.props.store}/> :
-      <div className="loading">...</div>
+      <Loader />
     );
   }
 }

@@ -1,15 +1,49 @@
-import React from 'react';
+import React, { Component } from 'react';
 
-const Story = ({story, bookmark, unbookmark}) => (
-  <div className="Story">
-    <h3 style={story.isBookmarked ? {color: "red"} : {}} className="Story__heading">{story.title}</h3>
-    <div className="Story__score">Score: {story.score}</div>
-    <div className="Story__author">By: {story.by}</div>
-    <div style={{marginBottom: "50px"}}>
-      <button onClick={() => {bookmark(story.id)}}>Bookmark</button>
-      <button onClick={() => {unbookmark(story.id)}}>Unbookmark</button>
+import './Story.css';
+import heart from './heart.svg';
+import heartSelected from './heart-selected.svg';
+import pck from '../packery';
+
+class Story extends Component {
+
+  componentDidMount() { 
+    // Initialize packery
+    pck.init(pck.getPackery());
+  }
+
+  render() {
+    let story = this.props.story;
+    let bookmark = this.props.bookmark;
+    let unbookmark = this.props.unbookmark;
+
+    return (
+      <div className="Story">
+        <h3 className= "Story__heading">
+          <a target="_blank" rel="noopener noreferrer" className="Story__haeding-link" href={story.url}>{story.title}</a>
+        </h3>
+        <div className="Story__score">Score: <span className="Story__detail">{story.score}</span></div>
+        <div className="Story__author">By: <span className="Story__detail">{story.by}</span></div>
+        <button 
+          className="Story__button" 
+          onClick={ !story.isBookmarked ?
+                    () => {bookmark(story.id)} :
+                    () => {unbookmark(story.id)}
+                  }>
+          <img 
+            className={story.isBookmarked ? "Story__heart Story__heart_bkmarked" : "Story__heart"}  
+            alt="" 
+            src={ story.isBookmarked ?
+              heartSelected :
+              heart
+            } />
+        </button>
     </div>
-  </div>
-);
+
+
+    );
+  }
+}
+
 
 export default Story;

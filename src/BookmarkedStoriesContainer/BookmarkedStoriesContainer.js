@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import Stories from '../Stories/Stories';
+import Loader from '../Loader/Loader';
+import Message from '../Message/Message';
 
 class BookmarkedStoriesContainer extends Component {
   constructor(props) {
@@ -35,11 +37,15 @@ class BookmarkedStoriesContainer extends Component {
   }
 
   render() {
+    let message = "You don't have any bookmarked stories.";
+    let actionText = "Start Bookmarking";
+    let actionUrl = "/hacker-news";
+
     if (!this.state.stories) {
-      return (<div className="loading">...</div>);
+      return <Loader />;
 
     } else if (this.state.stories.constructor === Array && this.state.stories.length === 0) { // There is no bookmarked stories
-      return (<div className="no-bookmarked">You don't have any bookmarked stories.</div>);
+      return <Message message={message} actionText={actionText} actionUrl={actionUrl}/>;
 
     }
 

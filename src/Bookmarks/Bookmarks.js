@@ -4,7 +4,7 @@ import BookmarkedStoriesContainer from '../BookmarkedStoriesContainer/Bookmarked
 
 const HackerNews = ({store}) => (
   <div className="HackerNews">
-    <HNHeader />
+    <HNHeader top100isSelected={false} />
     <BookmarkedStoriesContainer store={store} />
   </div>
 );

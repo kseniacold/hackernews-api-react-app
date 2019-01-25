@@ -1,0 +1,33 @@
+@import './../commons.less';
+
+.Story {
+  cursor: move;
+  width: 12rem;
+  height: 13.5rem;
+
+  padding: 0.750rem 1.5rem;
+  background: @hn-tile-bg;
+  position: relative;
+}
+
+.Story__haeding-link , .Story__score, .Story__author {
+  .hn-story-text-mix();
+}
+
+.Story__heading {
+  margin-bottom: 1.167em;
+}
+
+.Story__detail {
+  color: @hn-accent-cl;
+}
+
+.Story__button {
+  position: absolute;
+  bottom:  0.750rem;
+  cursor: pointer;
+}
+
+.Story__heart {
+  width: 1.167rem;
+}
