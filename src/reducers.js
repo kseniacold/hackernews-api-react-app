@@ -1,4 +1,4 @@
-import { SET_STORIES, BOOKMARK_STORY, UN_BOOKMARK_STORY  } from "./actions";
+import { SET_STORIES, BOOKMARK_STORY, UN_BOOKMARK_STORY, SET_BOOKMARKS  } from "./actions";
 // import { combineReducers } from 'redux';
 
 /**
@@ -25,6 +25,13 @@ function storiesReducer(state = [], action) {
  */
 function bookmarkReducer(state = [], action) {
   switch (action.type) {
+
+    case SET_BOOKMARKS:
+      if (state.length === 0) { // no bookmarks so far
+        return Array.from(action.bookmarkedStoriesIds);
+      } else {
+        return state.concat(action.bookmarkedStoriesIds);
+      }
     
     case BOOKMARK_STORY: 
       return state.concat([action.storyId]);
