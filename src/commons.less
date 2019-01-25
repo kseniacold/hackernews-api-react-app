@@ -6,7 +6,8 @@
 
 
 // Layout
-@content-max-width: 1140px; 
+@content-max-width: 1140px;
+@hn-content-max-width: 90%;
 
 // Color variables
 
@@ -21,6 +22,13 @@
 @policies-head-cl: #016CB7;
 @placeholder-cl: #9BA9BB;
 
+// HN App 
+@hn-accent-cl: #4A47E9;
+@hn-text-cl: #000000;
+@hn-nav-cl: #FFFFFF;
+@hn-tile-bg: #F6F6F6;
+@hn-heart-unselected: #A0A0A0;
+
 
 
 // ==============================================
@@ -33,6 +41,8 @@
 // Typography variables
 @base-font: 'Lato', sans-serif;
 @accent-font:  'Montserrat', sans-serif;
+
+@hn-font: 'Roboto Mono', monospace;
 
 
 // ==============================================
@@ -190,4 +200,16 @@
 .content-width-mix() {
     max-width: @content-max-width;
     margin: auto;
+}
+
+// HN App Typography
+
+.hn-nav-text-mix() {
+    font-size: 0.750em;
+    font-family: @hn-font;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    text-align: center;
+    color: @hn-nav-cl;
 }
