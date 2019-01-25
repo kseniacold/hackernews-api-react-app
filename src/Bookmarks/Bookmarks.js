@@ -1,11 +1,11 @@
 import React from 'react';
 import HNHeader from '../HNHeader/HNHeader';
-import StoriesContainer from '../StoriesContainer/StoriesContainer';
+import BookmarkedStoriesContainer from '../BookmarkedStoriesContainer/BookmarkedStoriesContainer';
 
 const HackerNews = ({store}) => (
   <div className="HackerNews">
     <HNHeader />
-    <StoriesContainer store={store} />
+    <BookmarkedStoriesContainer store={store} />
   </div>
 );
 
