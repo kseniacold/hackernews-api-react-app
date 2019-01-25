@@ -8,13 +8,12 @@
     "react-dom": "^16.7.0",
     "react-less-watcher": "^1.1.4",
     "react-redux": "^6.0.0",
-    "react-router": "^4.3.1",
     "react-router-dom": "^4.3.1",
     "react-scripts": "2.1.3",
     "redux": "^4.0.1"
   },
   "scripts": {
-    "watch-less": "gulp watchLess",
+    "watch-less": "less-watch-compiler --enable-js src/ src/",
     "start-js": "react-scripts start",
     "start": "npm-run-all -p watch-less start-js",
     "build": "build-less && react-scripts build",
