@@ -1,4 +1,5 @@
 import React from 'react';
+import './LandingPage';
 
 // Static Landing Page Components
 import Hero from '../Hero/Hero';

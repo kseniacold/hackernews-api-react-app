@@ -5,7 +5,11 @@
   .content-width-mix();
   padding: 6.375em 4.5em 0;
 
-  display: flex;
+ .display(flex);
+
+  @media @mobile {
+    display: block;
+  }
 }
 
 .Solutions__heading, .Solutions__features {
@@ -21,7 +25,7 @@
 }
 
 .Solutions__features-item {
-  display: flex;
+ .display(flex);
   align-items: flex-start;
 
   padding-left: 5em;

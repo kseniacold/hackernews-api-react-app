@@ -58,13 +58,12 @@ class Footer extends Component {
                 </a>
               </li>
             </ul>
-
-            <div className="Footer__social-media">
+          </nav>
+          <div className="Footer__social-media">
               <img src={twitter} className="Footer__sm-icon" alt="Twitter Icon" />
               <img src={facebook} className="Footer__sm-icon" alt="Facebook Icon" />
               <img src={instagram} className="Footer__sm-icon" alt="Instagram Icon" />
             </div>
-          </nav>
           
         </div>
 

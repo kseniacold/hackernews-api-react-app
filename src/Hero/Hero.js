@@ -1,5 +1,5 @@
 import React from 'react';
-import Navigation from '../Navigation/Navigation';
+import Header from '../Header/Header';
 import backgroundImage from './blue-bg_top.svg';
 
 import './Hero.css';
@@ -11,7 +11,7 @@ const backgroundImgStyle = {
 
 const Hero = () => (
   <div style={backgroundImgStyle} className="Hero">
-    <Navigation />
+    <Header />
     <Banner />
   </div>
 );

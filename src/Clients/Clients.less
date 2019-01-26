@@ -7,8 +7,12 @@
 .Clients__logos {
   .content-width-mix();
 
-  display: flex;
-  justify-content: space-between;
+ .display(flex);
+  .justify-content(space-between);
 
   padding: 3.125em 0;
+
+  @media @mobile {
+    display: block;
+  }
 }

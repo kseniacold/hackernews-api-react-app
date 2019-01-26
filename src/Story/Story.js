@@ -18,7 +18,7 @@ class Story extends Component {
     let unbookmark = this.props.unbookmark;
 
     return (
-      <div className="Story">
+      <div className={story.isBookmarked ? "Story Story_bkmarked" : "Story"}  >
         <h3 className= "Story__heading">
           <a target="_blank" rel="noopener noreferrer" className="Story__haeding-link" href={story.url}>{story.title}</a>
         </h3>

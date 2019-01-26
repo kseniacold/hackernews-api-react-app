@@ -6,6 +6,8 @@
   background-size: cover;
   
   padding-top: 20.625rem;
+  
+  background-position-y: 8.25rem;
 }
 
 .Policies__content {
@@ -22,13 +24,17 @@
 }
 
 .Policies__row {
-  display: flex;
+ .display(flex);
   width: 100%;
 
-  justify-content: space-between;
+  .justify-content(space-between);
 
   &:not(:last-child) {
     margin-bottom: 3.125rem;
+  }
+
+  @media @mobile {
+    display: block;
   }
 }
 
@@ -42,8 +48,12 @@
   border-radius: 4px;
   width: 50%;
 
-  display: flex;
+ .display(flex);
   padding: 2.188rem;
+
+  @media @mobile {
+    display: block;
+  }
 }
 
 .Policies__box_right {

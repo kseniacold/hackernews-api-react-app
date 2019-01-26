@@ -7,8 +7,12 @@
 
 .Footer__content {
   .content-width-mix();
-  display: flex;
-  align-items: center;
+ .display(flex);
+ .align-items(center);
+
+  @media @mobile {
+    display: block;
+  }
 }
 
 .Footer__logo {
@@ -22,23 +26,41 @@
 }
 
 .Footer__nav {
-  display: flex;
-  width: 100%;
+  .display(flex);
+  .flex-grow(2);
+  .justify-content(space-between);
 
-  justify-content: flex-end;
+
+  @media @mobile {
+    display: block;
+  }
 }
 
 .Footer__nav-list {
-  display: flex;
+  .display(flex);
+
+
+  @media @mobile {
+    display: block;
+  }
 }
 
 .Footer__nav-item {
-  margin-right: 1.250rem;
+  .flex-grow(2);
+  &:not(:last-child) {
+    margin-right: 1.250rem;
+  }
+}
+
+.Footer__social-media {
+  .display(flex);
+
+  
 }
 
 .Footer__sm-icon {
   &:not(:last-child) {
-    margin-right: 1.250rem;
+    margin-right: 2.5rem;
   }
 }
 
