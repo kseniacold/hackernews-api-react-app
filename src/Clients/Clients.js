@@ -11,10 +11,10 @@ class Clients extends Component {
     return (
        <div className="Clients">
           <div className="Clients__logos">
-            <img alt="Chubb Logo" src ={chubbLogo} />
-            <img alt="Nationwide Logo" src ={nationwideLogo} />
-            <img alt="QBE Logo" src ={qbeLogo} />
-            <img alt="Assurant Logo" src ={assurantLogo} />
+            <img className="Clients__logo-img" alt="Chubb Logo" src ={chubbLogo} />
+            <img className="Clients__logo-img" alt="Nationwide Logo" src ={nationwideLogo} />
+            <img className="Clients__logo-img" alt="QBE Logo" src ={qbeLogo} />
+            <img className="Clients__logo-img" alt="Assurant Logo" src ={assurantLogo} />
           </div>
        </div>
     );
