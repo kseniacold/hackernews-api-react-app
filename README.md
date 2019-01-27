@@ -6,7 +6,6 @@ __Hacker News Reader__ is a `React.js` application consisting of 2 sub-apps:
 * __Hacker News Reader__ available `/hacker-news` is a feed reader. It fetches from [the Hacker News APIs](https://github.com/HackerNews/API) and allows to view 100 top stories and to bookmark them.
 <br>
 The project shows the basic patterns of React application state management using [Redux.js](https://redux.js.org/)
-<br>
 The project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ---
