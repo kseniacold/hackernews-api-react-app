@@ -117,4 +117,4 @@ Under the hood [Create React App]
 <br>
 <br>
 
-__author__ [Ksenia](https://kseniacodes.com)
+__author__ [Ksenia  Koldaeva](https://kseniacodes.com)
