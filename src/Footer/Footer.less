@@ -2,17 +2,13 @@
 
 .Footer {
   background-color: #FFFFFF;
-  padding: 3.750rem 0;
+  padding: .toR(60)[@rem] 0;
 }
 
 .Footer__content {
   .content-width-mix();
  .display(flex);
  .align-items(center);
-
-  @media @mobile {
-    display: block;
-  }
 }
 
 .Footer__logo {
@@ -29,20 +25,10 @@
   .display(flex);
   .flex-grow(2);
   .justify-content(space-between);
-
-
-  @media @mobile {
-    display: block;
-  }
 }
 
 .Footer__nav-list {
   .display(flex);
-
-
-  @media @mobile {
-    display: block;
-  }
 }
 
 .Footer__nav-item {
@@ -54,8 +40,6 @@
 
 .Footer__social-media {
   .display(flex);
-
-  
 }
 
 .Footer__sm-icon {
@@ -67,3 +51,5 @@
 .Footer__nav-link {
   .footer-text-mix();
 }
+
+@import './_Footer.mobile.less';

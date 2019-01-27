@@ -1,0 +1,78 @@
+@import './../commons.less';
+
+@media @below-1200 {
+  .Solutions__heading {
+    width: 42%;
+  }
+
+  .Solutions__features {
+    width: 58;
+  }
+
+  // Change up features icons
+  .Solutions__features-icon_desktop {
+    display: none;
+  }
+
+  .Solutions__features-icon_mob {
+    .transform(scale(.55));
+  }
+
+  .Solutions__features-heading {
+    .display(flex);
+    .align-items(center);
+    .justify-content(center);
+    margin-bottom: .to(12)[@em];
+  }
+  
+  .Solutions__features-heading-text {
+    margin-bottom: 0;
+  }
+
+  .Solutions__features-item { 
+    padding-left: 2rem;
+  }
+
+  .Solutions__features-box {
+    margin: auto;
+  }
+}
+
+@media @below-920 {
+  .Solutions {
+    display: block;
+    max-width: @tablet-max-width;
+    margin: auto;
+    padding: .toR(72)[@rem] 0 0;
+    text-align: center; 
+  }
+  
+  .Solutions__heading, .Solutions__features {
+      width: 100%;  
+  }
+  
+  .Solutions__heading {
+    margin-bottom: .toR(24)[@rem];  
+  }
+  
+  .Solutions__features-item { 
+    padding: 0;
+  
+    &:not(:last-child) {
+      margin-bottom: .toR(20)[@rem];
+    }
+   }
+}
+
+@media @below-720 {
+  .Solutions {
+    padding: .toR(38)[@rem] 0 0;
+  }
+}
+
+@media @below-640 {
+  .Solutions {
+    width: @below-720-width;
+    max-width: none;
+  }
+}

@@ -11,23 +11,6 @@
   .justify-content(space-between);
 
   padding: 3.125rem 0;
-
-  @media @mobile {
-    width: @mobile-width;
-    margin: auto;
-    display: block;
-    text-align: center;
-
-    padding: 4.125rem 0;
-  }
 }
 
-@media @mobile {
-  .Clients__logo-img {
-    .transform(scale(.8));
-
-    &:not(:last-child) {
-      margin-bottom: .toR(20)[@rem];
-    }
-  }
-}
+@import './_Clients.mobile.less';

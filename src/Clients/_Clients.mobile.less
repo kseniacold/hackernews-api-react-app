@@ -1,0 +1,49 @@
+@import './../commons.less';
+
+@media @btw-920-1200 {
+  .Clients {
+    padding: 0 4.5rem;
+  }
+
+  .Clients__logos {
+    .flex-wrap(wrap);
+    .flex-direction(row);
+      max-width: 680px;
+  }
+
+  .Clients__logo-img {
+   .flex-basis(calc(~'50% - 20px'));
+
+   &:not(:nth-child(n+3)) {
+     margin-bottom: .toR(22)[@rem];
+   }
+  }
+}
+
+@media @below-1200 {
+  .Clients__logo-img {
+    .transform(scale(.8));
+  }
+}
+
+@media @below-920 {
+  .Clients__logos {
+    width: @below-720-width;
+    margin: auto;
+    display: block;
+    text-align: center;
+
+    padding: .toR(46)[@rem] 0;
+  }
+
+  .Clients__logo-img {
+    .transform(scale(.8));
+    display: block;
+    margin: auto;
+
+    &:not(:last-child) {
+      margin-bottom: .toR(20)[@rem];
+    }
+  }
+  
+}

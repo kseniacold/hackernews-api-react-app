@@ -21,7 +21,7 @@ const Policies = () => (
           </h2>
           <div className="Policies__row">
             <div className="Policies__box Policies__box_left">
-              <img className="Parters__box-icon" alt="Pet Coverage Icon" src={petIcon} />
+              <img className="Policies__box-icon" alt="Pet Coverage Icon" src={petIcon} />
               <div className="Policies__box-text">
                 <h4 className="Policies__box-heading">Pet Coverage</h4>
                 <p className="Policies__box-description">Includes preventative, accident, and comprehensive</p>
@@ -29,7 +29,7 @@ const Policies = () => (
             </div>
 
             <div className="Policies__box Policies__box_right">
-              <img className="Parters__box-icon" alt="Travel Coverage Icon" src={travelIcon} />
+              <img className="Policies__box-icon" alt="Travel Coverage Icon" src={travelIcon} />
               <div className="Policies__box-text">
                 <h4 className="Policies__box-heading">Travel Coverage</h4>
                 <p className="Policies__box-description">Includes baggage, car, rental, leisure, and flight policies</p>
@@ -39,7 +39,7 @@ const Policies = () => (
 
           <div className="Policies__row">
             <div className="Policies__box Policies__box_left">
-              <img className="Parters__box-icon" alt="Property Coverage Icon" src={propIcon}/>
+              <img className="Policies__box-icon" alt="Property Coverage Icon" src={propIcon}/>
               <div className="Policies__box-text">
                 <h4 className="Policies__box-heading">Property Coverage</h4>
                 <p className="Policies__box-description">Includes jewelry, collectibles, and smartphones policies</p>
@@ -47,7 +47,7 @@ const Policies = () => (
             </div>
 
             <div className="Policies__box Policies__box_right">
-              <img className="Parters__box-icon" alt="Event Coverage Icon" src={eventIcon} />
+              <img className="Policies__box-icon" alt="Event Coverage Icon" src={eventIcon} />
               <div className="Policies__box-text">
                 <h4 className="Policies__box-heading">Catastrophic Event Coverage</h4>
                 <p className="Policies__box-description">Includes weddings, and special events policies</p>
@@ -58,7 +58,7 @@ const Policies = () => (
 
           <div className="Policies__row Policies__row_one-item">
             <div className="Policies__box">
-              <img className="Parters__box-icon" alt="Home Coverage Icon" src={homeIcon}/>
+              <img className="Policies__box-icon" alt="Home Coverage Icon" src={homeIcon}/>
               <div className="Policies__box-text">
                 <h4 className="Policies__box-heading">Home Coverage</h4>
                 <p className="Policies__box-description">Includes renters, eviction , and homeowners policies</p>

@@ -9,7 +9,7 @@
 }
 
 .toR(@target, @context: 16 ) {
-    @rem: (@target / @context) + 0em;
+    @rem: (@target / @context) + 0rem;
 }
 
 
@@ -17,10 +17,18 @@
 // Media Queries
 // ==============================================
 
-@menu-fold: ~'screen and (min-width: 1200px)';
-@tablets:  ~'screen and (min-width: 720px) and (max-width: 920px)';
-@mobile: ~'screen and (max-width: 720px)';
-@above-mobile: ~'screen and (min-width: 721px)';
+@menu-fold: ~'screen and (min-width: 1201px)';
+@below-1200:  ~'screen and (max-width: 1200px)';
+@above-1200: ~'screen and (min-width: 1201px)';
+
+@btw-920-1200:  ~'screen and (min-width: 921px) and (max-width: 1200px)';
+@btw-720-920:  ~'screen and (min-width: 721px) and (max-width: 920px)';
+@below-920: ~'screen and (max-width: 920px)';
+
+@below-720: ~'screen and (max-width: 720px)';
+@above-720: ~'screen and (min-width: 721px)';
+
+@below-640: ~'screen and (max-width: 640px)';
 
 // ==============================================
 // Variables
@@ -29,7 +37,8 @@
 
 // Layout
 @content-max-width: 1140px;
-@mobile-width: 85%;
+@tablet-max-width: 520px;
+@below-720-width: 85%;
 @hn-content-margin: 5.938rem;
 
 
@@ -85,7 +94,12 @@
     letter-spacing: 1px;
     color: @color;
     
-    @media @mobile {
+    @media @below-1200 {
+        font-size: .toR(50)[@rem];
+        line-height: .to(70, 50)[@em];
+    }
+
+    @media @below-920 {
         font-size: 2rem;
         line-height: .to(43, 32)[@em];
         letter-spacing: 0.580645px;
@@ -102,7 +116,7 @@
     letter-spacing: 1px;
     color: #fff;
 
-    @media @mobile {
+    @media @below-720 {
         font-size: 2.750rem;
     }
 }
@@ -117,7 +131,7 @@
     letter-spacing: 1px;
     color: #FFFFFF;
 
-    @media @mobile {
+    @media @below-720 {
         line-height: 1.344em;
         font-size: 2rem;
     }
@@ -132,7 +146,7 @@
     letter-spacing: 0.74px;
     color: @h3-cl;
 
-    @media @mobile {
+    @media @below-720 {
         font-size: 1.250rem;
     }
 }
@@ -146,7 +160,7 @@
     text-align: center;
     color: #FFFFFF;
 
-    @media @mobile {
+    @media @below-720 {
         line-height: 1.344em;
         font-size: 2rem;
     }
@@ -183,7 +197,7 @@
     letter-spacing: 1px;
     color: #FFFFFF;
 
-    @media @mobile {
+    @media @below-720 {
         font-weight: normal;
         line-height: 1.375em;
         font-size: 1rem;
@@ -228,7 +242,7 @@
     text-align: center;
     color: #FFFFFF;
 
-    @media @mobile {
+    @media @below-720 {
         font-size: 1.250rem;
     }
 }

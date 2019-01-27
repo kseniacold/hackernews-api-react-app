@@ -1,10 +1,13 @@
 @import './../commons.less';
 
+
+@bg-top-height: (image-height('./blue-bg_top.svg')) * .15;
+
 .Hero {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: bottom;
     background-color: #FFFFFF;
 
-    background-position-y: -14.375rem;
+    background-position-y: calc(~'100% - @{bg-top-height}');
 }

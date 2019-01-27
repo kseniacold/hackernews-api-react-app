@@ -1,34 +1,20 @@
 @import './../commons.less';
 
 .Banner {
-    .content-width-mix();
-    text-align: center;
+  .content-width-mix();
+  text-align: center;
 
-    padding: 5.750rem 0;
-
-    @media @mobile {
-      padding: 1.625rem 0 3.125rem;
-    }
+  padding: 5.750rem 0;
 }
 
 .Banner__heading {
   .h2-mix();
-
-  @media @mobile {
-    margin-bottom: 0.625rem;
-  }
 }
 
 .Banner__description {
   .p-description-mix();
   margin: auto auto 1.667rem;
   width: 70%;
-
-  @media @mobile {
-    margin: auto;
-    width: @mobile-width;
-    margin-bottom: 1.625em;
-  }
 }
 
 .Banner__button {
@@ -40,3 +26,5 @@
 .Banner__example-img {
   max-width: 80%;
 }
+
+@import './_Banner.mobile.less';

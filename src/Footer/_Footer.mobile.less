@@ -1,0 +1,47 @@
+@import './../commons.less';
+
+@media @below-1200 {
+  .Footer {
+    width: @below-720-width;
+    margin: auto;
+  
+    padding: .toR(40)[@rem] 0;
+  }
+
+  .Footer__content {
+    display: block;
+    text-align: center;
+  }
+  
+  .Footer__logo {
+    margin-right: 0;
+    margin-bottom: .toR(27)[@rem];
+  }
+
+  .Footer__copyright {
+    margin-right: 0;
+    margin-bottom: .toR(20)[@rem];
+  }
+  
+  .Footer__nav {
+    display: block;
+    margin-bottom: 1rem;
+  }
+
+  .Footer__nav-list {
+    display: block;
+  }
+
+  .Footer__nav-item {
+    &:not(:last-child) {
+      margin-right: 0;
+      margin-bottom: .toR(18)[@rem];
+    }
+  }
+
+  .Footer__social-media  {
+    .justify-content(center);
+  }
+
+}
+

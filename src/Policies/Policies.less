@@ -4,17 +4,13 @@
   background-color: #FFFFFF;
   background-repeat: no-repeat;
   background-size: cover;
-  
-  padding-top: 20.625rem;
-  
-  background-position-y: 8.25rem;
+  padding-top: 20%;
 }
 
 .Policies__content {
   .content-width-mix();
     text-align: center;
-
-    padding: 6.375em 4.5em;
+    padding: 0 4.5rem 6.375rem 4.5rem;
 }
 
 .Policies__heading {
@@ -32,10 +28,6 @@
   &:not(:last-child) {
     margin-bottom: 3.125rem;
   }
-
-  @media @mobile {
-    display: block;
-  }
 }
 
 .Policies__row_one-item {
@@ -50,10 +42,6 @@
 
  .display(flex);
   padding: 2.188rem;
-
-  @media @mobile {
-    display: block;
-  }
 }
 
 .Policies__box_right {
@@ -62,6 +50,10 @@
 
 .Policies__box_left {
   margin-right: 1.563rem;
+}
+
+.Policies__box-icon {
+  margin-bottom: .toR(14)[@rem];
 }
 
 .Policies__box-text {
@@ -81,3 +73,5 @@
 
   text-align: left;
 }
+
+@import './_Policies.mobile.less';

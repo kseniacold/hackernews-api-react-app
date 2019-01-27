@@ -1,0 +1,23 @@
+@import './../commons.less';
+
+@media @below-920 {
+  .Contact__content {
+    max-width: @tablet-max-width;
+    margin: auto;
+  }
+}
+
+@media @below-720 {
+  .Contact {
+    padding: .toR(50)[@rem] 0;
+  }
+
+  .Contact__content {
+    width: @below-720-width;
+    margin: auto;
+  }
+
+  .Contact__heading {
+    margin-bottom: .to(20, 32)[@em];
+  }
+}
