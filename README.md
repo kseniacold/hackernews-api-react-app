@@ -5,7 +5,7 @@ __Hacker News Reader__ is a `React.js` application consisting of 2 sub-apps:
 * __Landing Page__  available at `/` is a responsive view created accroding to the prototype.
 * __Hacker News Reader__ available `/hacker-news` is a feed reader. It fetches from [the Hacker News APIs](https://github.com/HackerNews/API) and allows to view 100 top stories and to bookmark them.
 <br>
-The project shows the basic patterns of React application state management using `Redux.js`
+The project shows the basic patterns of React application state management using [Redux.js](https://redux.js.org/)
 <br>
 The project was bootstrapped with [Create React App]
 (https://github.com/facebook/create-react-app).
@@ -41,21 +41,21 @@ The project was bootstrapped with [Create React App]
 
 In the project directory, you can run:
 
-### `npm run watch-less`
+#### `npm run watch-less`
 
 Watches the changes in `.less` stylesheet files, compiles them to `.css` files on the change.
 
-### `npm run start-js`
+#### `npm run start-js`
 
 Runs the React Application without compiling `.less` files
 
-### `npm run start`
+#### `npm run start`
 
 Runs the application in the development mode.<br>
 
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-#### Available Routes
+##### Available Routes
 
 * `/` __Sure App Landing Page__ view
 * `/hacker-news` __Hacker News Reader__: top 100 stories with draggable layout
@@ -104,7 +104,6 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 * `src/Component/Component.mobile.less` is a the component's responsive stylesheet. It is imported to the `/src/Component/Component.less` stylesheet and get's compiled there
 * `src/Component/Component.css` is a compiled stylesheet, do not modify it directly
 * The component folder also may contain additional files like images and icons
-<br>
 * `/src/commons.less` is a mixins files - that provides common variables and mixins to the project. It allows to quicky modify the project's theme in one place
 * `/src/index.less` resets default styles and installs necessary fonts
 * `index.js` Application Entry point
@@ -120,7 +119,3 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 <br>
 
 __author__ [Ksenia](https://kseniacodes.com)
-
-
-
-
