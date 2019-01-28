@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import Story from '../Story/Story';
 
+import axios from 'axios';
+
 import {
   bookmarkStory,
   unBookmarkStory
@@ -15,25 +17,29 @@ class StoryContainer extends Component {
     };
   }
 
+  // track state to prevent change state on unmouted component
+  _isMounted = false;
+
   // Upddate component state every time the Store gets updated 
   // subscribe() returns a function for unregistering the listener
   // keep the handle to call when component unmounts
   unsubscribe = this.props.store.subscribe(() => {
     let _story = this._getStoryWithIsBookmarked(this.state.story);
-
     this.setState({
       story: _story
-    });
+    });  
   });
   
   componentDidMount() {
     const fetchUrl = `https://hacker-news.firebaseio.com/v0/item/${this.props.storyId}.json`;
+    this._isMounted = true;
 
-    fetch(fetchUrl)
-      .then(response => response.json())
-      .then(story => { 
-        let _story = this._getStoryWithIsBookmarked(story);
-        this.setState({story: _story });
+      axios.get(fetchUrl)
+      .then(response => { 
+        let _story = this._getStoryWithIsBookmarked(response.data);
+        if (this._isMounted) {
+          this.setState({story: _story });
+        }
       });
   }
 
@@ -58,6 +64,7 @@ class StoryContainer extends Component {
   };
 
   componentWillUnmount() {
+    this._isMounted = false;
     this.unsubscribe();
   }
 

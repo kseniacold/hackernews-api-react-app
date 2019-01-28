@@ -5,6 +5,7 @@
   "dependencies": {
     "@material-ui/core": "^3.9.0",
     "@material-ui/icons": "^3.0.2",
+    "axios": "^0.18.0",
     "draggabilly": "^2.2.0",
     "localforage": "^1.7.3",
     "npm-run-all": "^4.1.5",

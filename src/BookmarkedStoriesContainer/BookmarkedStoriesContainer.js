@@ -21,8 +21,6 @@ class BookmarkedStoriesContainer extends Component {
     }
   }
 
-  private 
-
   // Upddate component state every time the Store gets updated 
   // subscribe() returns a function for unregistering the listener
   // keep the handler to call when component unmounts
