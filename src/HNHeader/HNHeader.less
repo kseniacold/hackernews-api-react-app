@@ -42,10 +42,15 @@
 
 .HNHeader__nav-link {
   padding: 0 3rem;
-
+  min-width: 12rem;
   height: 100%;
   .display(flex);
   .align-items(center);
+  .justify-content(center);
+
+  &:not(:last-child) {
+    margin-right: 20px;
+  }
 }
 
 .HNHeader__nav-link_selected {

@@ -7,9 +7,13 @@ import heartIcon from './heart-nav.svg';
 
 const HNHeader = ({top100isSelected}) => (
   <div className="HNHeader">
-    <div className="HNHeader__logo">
-      <div className="HNHeader__logo-text">HN Reader</div>
-    </div>
+    <Link to="/hacker-news">
+      <div className="HNHeader__logo">
+          <div className="HNHeader__logo-text">
+            HN Reader
+          </div>
+      </div>
+    </Link>
     <nav className="HNHeader__nav">
       <Link className={ top100isSelected ? "HNHeader__nav-link HNHeader__nav-link_selected" : "HNHeader__nav-link" }   to="/hacker-news">Top 100</Link>
       <Link className={ top100isSelected ? "HNHeader__nav-link" : "HNHeader__nav-link HNHeader__nav-link_selected" } to="/my-bookmarks">
