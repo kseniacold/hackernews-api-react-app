@@ -38,9 +38,10 @@
   ],
   "devDependencies": {
     "gulp": "^4.0.0",
+    "gulp-cli": "^2.0.1",
     "gulp-less": "^4.0.1",
-    "less-watch-compiler": "^1.13.0",
     "less": "^3.9.0",
+    "less-watch-compiler": "^1.13.0",
     "lesshat": "^4.1.0"
   }
 }
