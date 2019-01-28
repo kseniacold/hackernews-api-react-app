@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import Story from '../Story/Story';
 
-import axios from 'axios';
+import hnApi from '../services/hn-api';
 
 import {
   bookmarkStory,
@@ -39,12 +39,12 @@ class StoryContainer extends Component {
   });
   
   componentDidMount() {
-    const fetchUrl = `https://hacker-news.firebaseio.com/v0/item/${this.props.storyId}.json`;
     this._isMounted = true;
 
-      axios.get(fetchUrl).then(response => { 
+    // Fetch Story from the HN API
+      hnApi.loadStory(this.props.storyId).then(data => { 
         if (this._isMounted) {
-          let _story = this._getStoryWithIsBookmarked(response.data);
+          let _story = this._getStoryWithIsBookmarked(data);
           this.setState({story: _story });
         }
       }).catch(function(err) {

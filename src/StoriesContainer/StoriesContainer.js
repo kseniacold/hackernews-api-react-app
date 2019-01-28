@@ -3,7 +3,8 @@ import PropTypes from 'prop-types';
 import Stories from '../Stories/Stories';
 import Loader from '../Loader/Loader';
 
-import axios from 'axios';
+import config from '../config';
+import hnApi from '../services/hn-api';
 
 import {
   setStories
@@ -18,7 +19,7 @@ class StoriesContainer extends Component {
     };
   }
 
-  MAX_STORIES = 100;
+  MAX_STORIES = config.maxStories;
 
   // Upddate component state every time the Store gets updated 
   // subscribe() returns a function for unregistering the listener
@@ -31,11 +32,19 @@ class StoriesContainer extends Component {
 
   componentDidMount() {
     this._isMounted = true;
+    
     if (!this.state.stories || this.state.stories.length === 0) {
-      axios.get('https://hacker-news.firebaseio.com/v0/topstories.json').then(response => {
-        let _stories = response.data;
-        let hundredStories = _stories.slice(0, this.MAX_STORIES);
-        this.props.store.dispatch(setStories(hundredStories));
+      
+      // Get data from Hacaker News API
+      hnApi.loadStories().then(stories => {
+
+        if (stories && stories.constructor === Array) {
+          if (stories.length > this.MAX_STORIES) {
+            stories = stories.slice(0, this.MAX_STORIES);
+          }
+
+          this.props.store.dispatch(setStories(stories));
+        }
       }).catch(function(err) {
         console.error("Failed to fetch stories from the API:", err.message);
       });

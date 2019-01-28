@@ -57,5 +57,4 @@ BookmarkedStoriesContainer.propTypes = {
   checkedStorage: PropTypes.bool.isRequired
 };
 
-
 export default BookmarkedStoriesContainer;
