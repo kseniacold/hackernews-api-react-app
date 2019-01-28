@@ -48,7 +48,7 @@ In the project directory, you can run:
 
 #### `npm run start`
 
-Runs the application in the development mode.<br>
+Runs the application in the development mode together with less watcher running on background.<br>
 
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
