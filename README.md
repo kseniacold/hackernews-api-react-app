@@ -1,5 +1,9 @@
 # Hacker News Reader Application
 
+---
+__Live URL:__ [http://hnr.kseniacodes.com](http://hnr.kseniacodes.com)
+---
+
 __Hacker News Reader__ is a `React.js` application consisting of 2 sub-apps:
 
 * __Landing Page__  available at `/` is a responsive view created according to the prototype.
