@@ -4,6 +4,12 @@
 // ==============================================
 // Functions
 // ==============================================
+
+// These are mixins as functions
+// Availble in Less.js v. 3 and higher
+// Some editors do not recognize the usage and complain
+// This is valid syntax 
+
 .to(@target, @context: 16 ) {
     @em: ((@target / @context) + 0em);
 }
@@ -233,14 +239,14 @@
     color: @color;
 }
 
-.btn-text-mix() {
+.btn-text-mix(@color: #FFFFFF) {
     font-family: @base-font;
     font-style: normal;
     font-weight: normal;
     line-height: normal;
     font-size: 1.250rem;
     text-align: center;
-    color: #FFFFFF;
+    color: @color;
 
     @media @below-720 {
         font-size: 1.250rem;

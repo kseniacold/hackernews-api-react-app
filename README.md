@@ -32,8 +32,7 @@ The project was bootstrapped with [Create React App](https://github.com/facebook
 
 You will need the following installed:
 
-1. [npm, nodejs v.10.xx](https://nodejs.org/en/)
-2. [gulp-cli](https://gulpjs.com/)
+* [npm, nodejs v.10.xx](https://nodejs.org/en/)
 
 ### To install the project:
 
