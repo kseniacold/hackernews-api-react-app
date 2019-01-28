@@ -1,0 +1,44 @@
+@import './../commons.less';
+
+@media @below-920 {
+  .HNHeader__nav-link {
+    min-width: none;
+  }
+}
+
+@media @below-720 {
+  .HNHeader {
+    display: block;
+    height: auto;
+    padding: 1.5rem 1.563rem;
+  }
+
+  .HNHeader__logo {
+    display: block;
+    width: @hn-content-margin;
+    text-align: center;
+    margin: auto;
+    margin-bottom: .toR(15)[@rem];
+  }
+
+  .HNHeader__nav {
+    display: block;
+    max-width: .toR(225)[@rem];
+    margin: auto;
+  }
+
+  .HNHeader__nav-link {
+    padding: .toR(10)[@rem] 3rem;
+    min-width: none;
+  
+    &:not(:last-child) {
+      margin-right: 0;
+      margin-bottom: .toR(20)[@rem];
+    }
+  }
+
+  .HNHeader__nav-link_selected {
+    border: .333em solid #ed6535;
+  }
+  
+}

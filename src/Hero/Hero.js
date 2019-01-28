@@ -9,11 +9,13 @@ const backgroundImgStyle = {
   backgroundImage: 'url(' + backgroundImage + ')'
 };
 
-const Hero = () => (
-  <div style={backgroundImgStyle} className="Hero">
-    <Header />
-    <Banner />
-  </div>
-);
+const Hero = ({toggleMenu}) => {
+  return (
+    <div style={backgroundImgStyle} className="Hero">
+      <Header toggleMenu={toggleMenu} />
+      <Banner />
+    </div>
+  ) 
+};
 
 export default Hero;

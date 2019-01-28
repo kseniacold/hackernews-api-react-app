@@ -1,0 +1,66 @@
+@import './../commons.less';
+
+@media @above-1200 {
+ .MobileMenu {
+    display: none;
+  }
+}
+
+.MobileMenu {
+  .display(flex);
+  .flex-direction(column);
+  height: 100vh;
+  padding: 1.2rem;
+}
+
+.MobileMenu__header {
+  .display(flex);
+  .justify-content(space-between);
+}
+
+.MobileMenu__close {
+  cursor: pointer;
+  color: @main-cl;
+}
+
+.MobileMenu__logo {
+  margin-bottom: 2em;
+}
+
+.MobileMenu__logo-img {
+  width: auto;
+  height: 20px
+}
+
+.Mobilemenu__nav-list {
+  .display(flex);
+  .flex-direction(column);
+  .align-items(flex-start);
+
+  .nav__item:not(:last-child) {
+    margin-bottom: 2.25em;
+    margin-right: 0;
+  }
+
+  .nav__link {
+    .nav-text-mix(@main-cl);
+  }
+
+  .nav__item_button-style {
+    padding: .5em 2em;
+    border-radius: .25em;
+    border: 1px solid @main-cl;
+  }
+
+  .nav__dropdown-icon_mobile-menu {
+    font-family: Material Icons;
+    font-style: normal;
+    font-weight: normal;
+    line-height: normal;
+    font-size: 1em;
+    padding-top: .125em;
+    color: @main-cl;
+    .align-items(center);
+  }
+
+} 

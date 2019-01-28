@@ -3,12 +3,12 @@ import MediaQuery from 'react-responsive';
 import HeaderDesktop from '../HeaderDesktop/HeaderDesktop';
 import HeaderMobile from '../HeaderMobile/HeaderMobile';
 
-const Header = () => (
+const Header = ({toggleMenu}) => (
     <MediaQuery minWidth={1200}>
         {matches => {
           return matches
             ? <HeaderDesktop />
-            : <HeaderMobile />
+            : <HeaderMobile toggleMenu={toggleMenu}/>
         }}
       </MediaQuery>
 );
