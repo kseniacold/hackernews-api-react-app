@@ -25,7 +25,6 @@ function storiesReducer(state = [], action) {
  */
 function bookmarkReducer(state = [], action) {
   switch (action.type) {
-
     case SET_BOOKMARKS:
       if (state.length === 0) { // no bookmarks so far
         return Array.from(action.bookmarkedStoriesIds);

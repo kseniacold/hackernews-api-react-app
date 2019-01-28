@@ -31,12 +31,13 @@ class StoriesContainer extends Component {
   componentDidMount() {
     this._isMounted = true;
     if (!this.state.stories || this.state.stories.length === 0) {
-      axios.get('https://hacker-news.firebaseio.com/v0/topstories.json')
-        .then(response => {
-          let _stories = response.data;
-          let hundredStories = _stories.slice(0, this.MAX_STORIES);
-          this.props.store.dispatch(setStories(hundredStories));
-        }); 
+      axios.get('https://hacker-news.firebaseio.com/v0/topstories.json').then(response => {
+        let _stories = response.data;
+        let hundredStories = _stories.slice(0, this.MAX_STORIES);
+        this.props.store.dispatch(setStories(hundredStories));
+      }).catch(function(err) {
+        console.error("Failed to fetch stories from the API:", err.message);
+      });
     }
   }
 

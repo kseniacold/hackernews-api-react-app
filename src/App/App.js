@@ -18,9 +18,30 @@ import {
 const STORE = createStore(hackerNewsApp);
 
 class App extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      checkedStorage: false
+    };
+  }
+
+  // track state to prevent change state on unmouted component
+  _isMounted = false;
+
   componentDidMount() {
+    let _app = this;
+    _app._isMounted = true;
+    
     // Get bookmarks from the local storage
     localForage.getItem('hn-reader-bookmarks').then(function(value) {
+      if (_app._isMounted) {
+        _app.setState({
+          checkedStorage: true
+        });
+      }
+
+      // Dispatch action to update app Store
       if (value && value.constructor === Array) {
         STORE.dispatch(setBookmarks(value));
       }
@@ -41,6 +62,7 @@ class App extends Component {
   });
 
   componentWillUnmount() {
+    this._isMounted = false;
     this.unsubscribe();
   }
 
@@ -55,7 +77,7 @@ class App extends Component {
               />
                <Route 
                 path="/my-bookmarks" exact 
-                render={(props) => <Bookmarks {...props} store={STORE} />}
+                render={(props) => <Bookmarks {...props} store={STORE} checkedStorage={this.state.checkedStorage}/>}
               />            
             </div>   
         </Router>

@@ -39,7 +39,7 @@ class BookmarkedStoriesContainer extends Component {
     let actionText = "Start Bookmarking";
     let actionUrl = "/hacker-news";
 
-    if (!this.state.stories) {
+    if (!this.state.stories || !this.props.checkedStorage) {
       return <Loader />;
 
     } else if (this.state.stories.constructor === Array && this.state.stories.length === 0) { // There is no bookmarked stories

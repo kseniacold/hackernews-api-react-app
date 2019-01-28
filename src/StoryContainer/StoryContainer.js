@@ -34,12 +34,13 @@ class StoryContainer extends Component {
     const fetchUrl = `https://hacker-news.firebaseio.com/v0/item/${this.props.storyId}.json`;
     this._isMounted = true;
 
-      axios.get(fetchUrl)
-      .then(response => { 
+      axios.get(fetchUrl).then(response => { 
         let _story = this._getStoryWithIsBookmarked(response.data);
         if (this._isMounted) {
           this.setState({story: _story });
         }
+      }).catch(function(err) {
+        console.error("Failed to fetch story from the API:", err.message);
       });
   }
 
