@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
+import { storyType } from '../types/index';
 
 import './Story.css';
 import heart from './heart.svg';
@@ -7,7 +9,7 @@ import pck from '../packery';
 
 class Story extends Component {
 
-  componentDidMount() { 
+  componentDidMount() {
     // Initialize packery
     pck.init(pck.getPackery());
   }
@@ -20,7 +22,10 @@ class Story extends Component {
     return (
       <div className={story.isBookmarked ? "Story Story_bkmarked" : "Story"}  >
         <h3 className= "Story__heading">
-          <a target="_blank" rel="noopener noreferrer" className="Story__haeding-link" href={story.url}>{story.title}</a>
+          { typeof story.url !== "undefined" ?
+            (<a target="_blank" rel="noopener noreferrer" className="Story__haeding-link" href={story.url}>{story.title}</a>) :
+            (<p className="Story__haeding-text">{story.title}</p>)
+          }
         </h3>
         <div className="Story__score">Score: <span className="Story__detail">{story.score}</span></div>
         <div className="Story__author">By: <span className="Story__detail">{story.by}</span></div>
@@ -39,11 +44,15 @@ class Story extends Component {
             } />
         </button>
     </div>
-
-
     );
   }
 }
+
+Story.propTypes = {
+  bookmark: PropTypes.func.isRequired,
+  unbookmark: PropTypes.func.isRequired,
+  story: storyType.isRequired
+};
 
 
 export default Story;

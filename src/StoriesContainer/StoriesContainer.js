@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import Stories from '../Stories/Stories';
 import Loader from '../Loader/Loader';
 
@@ -52,5 +53,9 @@ class StoriesContainer extends Component {
     );
   }
 }
+
+StoriesContainer.propTypes = {
+  store: PropTypes.object.isRequired
+};
 
 export default StoriesContainer;

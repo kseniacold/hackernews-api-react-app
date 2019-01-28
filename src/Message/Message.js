@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import './Message.css';
 
@@ -11,5 +12,11 @@ const Message = ({message, actionText, actionUrl}) => (
     }
   </div>
 );
+
+Message.propTypes = {
+  message: PropTypes.string.isRequired,
+  actionText: PropTypes.string,
+  actionUrl: PropTypes.string
+};
 
 export default Message;

@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import Stories from '../Stories/Stories';
 import Loader from '../Loader/Loader';
 import Message from '../Message/Message';
@@ -50,5 +51,11 @@ class BookmarkedStoriesContainer extends Component {
     return (<Stories stories={this.state.stories} store={this.props.store}/>);
   }
 }
+
+BookmarkedStoriesContainer.propTypes = {
+  store: PropTypes.object.isRequired,
+  checkedStorage: PropTypes.bool.isRequired
+};
+
 
 export default BookmarkedStoriesContainer;

@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 
 import './HNHeader.css';
@@ -23,5 +24,9 @@ const HNHeader = ({top100isSelected}) => (
    
   </div>
 );
+
+HNHeader.propTypes = {
+  top100isSelected: PropTypes.bool.isRequired
+};
 
 export default HNHeader;

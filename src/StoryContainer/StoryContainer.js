@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import Story from '../Story/Story';
 
 import axios from 'axios';
@@ -20,14 +21,21 @@ class StoryContainer extends Component {
   // track state to prevent change state on unmouted component
   _isMounted = false;
 
-  // Upddate component state every time the Store gets updated 
-  // subscribe() returns a function for unregistering the listener
-  // keep the handle to call when component unmounts
-  unsubscribe = this.props.store.subscribe(() => {
-    let _story = this._getStoryWithIsBookmarked(this.state.story);
-    this.setState({
-      story: _story
-    });  
+  /**
+   * Upddates component state every time the Store gets updated
+   * subscribe() returns a function for unregistering the listener\
+   * keep the handle to call when component unmounts
+   * 
+   * Here we subscribe to listen to when someone bookmarks the story
+   * The story must be not null at that point hence the check
+   */
+  unsubscribe = this.props.store.subscribe(() => {    
+    if (this.state.story) {
+      let _story = this._getStoryWithIsBookmarked(this.state.story);
+      this.setState({
+        story: _story
+      }); 
+    }
   });
   
   componentDidMount() {
@@ -35,8 +43,8 @@ class StoryContainer extends Component {
     this._isMounted = true;
 
       axios.get(fetchUrl).then(response => { 
-        let _story = this._getStoryWithIsBookmarked(response.data);
         if (this._isMounted) {
+          let _story = this._getStoryWithIsBookmarked(response.data);
           this.setState({story: _story });
         }
       }).catch(function(err) {
@@ -76,5 +84,10 @@ class StoryContainer extends Component {
     );
   }
 }
+
+StoryContainer.propTypes = {
+  storyId: PropTypes.number.isRequired,
+  store: PropTypes.object.isRequired
+};
 
 export default StoryContainer;

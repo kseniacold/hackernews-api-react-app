@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import StoryContainer from '../StoryContainer/StoryContainer';
 
 import './Stories.css';
@@ -16,5 +17,10 @@ class Stories extends Component {
     );
   }
 }
+
+Stories.propTypes = {
+  stories: PropTypes.arrayOf(PropTypes.number).isRequired,
+  store: PropTypes.object.isRequired
+};
 
 export default Stories;
