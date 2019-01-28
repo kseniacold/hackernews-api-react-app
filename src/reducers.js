@@ -8,6 +8,10 @@ import { SET_STORIES, BOOKMARK_STORY, UN_BOOKMARK_STORY, SET_BOOKMARKS  } from "
  * @param {*} action 
  */
 function storiesReducer(state = [], action) {
+  if (typeof action === 'undefined') {
+    return state;
+  }
+  
   switch (action.type) {
     case SET_STORIES:
       return Array.from(action.storiesIds);
@@ -24,6 +28,10 @@ function storiesReducer(state = [], action) {
  * @param {*} action 
  */
 function bookmarkReducer(state = [], action) {
+  if (typeof action === 'undefined') {
+    return state;
+  }
+
   switch (action.type) {
     case SET_BOOKMARKS:
       if (state.length === 0) { // no bookmarks so far
