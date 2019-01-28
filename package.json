@@ -6,13 +6,11 @@
     "@material-ui/core": "^3.9.0",
     "@material-ui/icons": "^3.0.2",
     "draggabilly": "^2.2.0",
-    "less-watch-compiler": "^1.13.0",
     "localforage": "^1.7.3",
     "npm-run-all": "^4.1.5",
     "packery": "^2.1.2",
     "react": "^16.7.0",
     "react-dom": "^16.7.0",
-    "react-less-watcher": "^1.1.4",
     "react-redux": "^6.0.0",
     "react-responsive": "^6.0.1",
     "react-router-dom": "^4.3.1",
@@ -20,10 +18,10 @@
     "redux": "^4.0.1"
   },
   "scripts": {
+    "start": "npm-run-all -p watch-less start-js",
     "watch-less": "less-watch-compiler --enable-js src/ src/",
     "start-js": "react-scripts start",
-    "start": "npm-run-all -p watch-less start-js",
-    "build": "build-less && react-scripts build",
+    "build": "npm run build-less && react-scripts build",
     "build-less": "gulp buildLess",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
@@ -39,8 +37,9 @@
   ],
   "devDependencies": {
     "gulp": "^4.0.0",
+    "gulp-less": "^4.0.1",
+    "less-watch-compiler": "^1.13.0",
     "less": "^3.9.0",
-    "less-recursive-compiler": "^1.0.3",
     "lesshat": "^4.1.0"
   }
 }
