@@ -4,7 +4,7 @@ __Hacker News Reader__ is a `React.js` application consisting of 2 sub-apps:
 
 * __Landing Page__  available at `/` is a responsive view created according to the prototype.
 * __Hacker News Reader__ available `/hacker-news` is a feed reader. It fetches from [the Hacker News APIs](https://github.com/HackerNews/API) and allows to view 100 top stories and to bookmark them.
-The project shows the basic patterns of React application state management using [Redux.js](https://redux.js.org/).  
+The project shows the basic patterns of React application state management using [Redux.js](https://redux.js.org/). 
 The project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ---
@@ -68,7 +68,7 @@ It correctly bundles React in production mode and optimizes the build for the be
 
 The build is minified and the filenames include the hashes.<br>
 Under the hood [Create React App]
-(https://github.com/facebook/create-react-app) uses [Webpack](https://webpack.js.org/) and [Babel](https://babeljs.io/). 
+(https://github.com/facebook/create-react-app) uses [Webpack](https://webpack.js.org/) and [Babel](https://babeljs.io/).
 
 
 #### `npm run test`
@@ -76,8 +76,8 @@ Under the hood [Create React App]
 >Launches the test runner in the interactive watch mode.<br>
 >See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-Availeble tests: 
-* `reducers.test.js` tests reducers funtion to be used in Redux Store
+Availeble tests:
+* `reducers.test.js` tests reducers function to be used in Redux Store
 * `hn-api.test.js` test data format received from the API
 
 ---
