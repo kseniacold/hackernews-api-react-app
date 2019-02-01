@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import LandingPage from '../LandingPage/LandingPage';
 import HackerNews from '../HackerNews/HackerNews';
 import Bookmarks from '../Bookmarks/Bookmarks';
 import { HashRouter as Router, Route} from 'react-router-dom';
@@ -70,9 +69,8 @@ class App extends Component {
     return (
         <Router>
            <div className="App">
-              <Route path="/" exact component={LandingPage} />
               <Route 
-                path="/hacker-news" exact 
+                path="/" exact 
                 render={(props) => <HackerNews {...props} store={STORE} />}
               />
                <Route 
