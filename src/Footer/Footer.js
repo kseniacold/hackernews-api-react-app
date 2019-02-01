@@ -1,10 +1,8 @@
 import React, { Component } from 'react';
 import logo  from './surelogo_blue.svg';
-import facebook from './Facebook.svg';
-import instagram from './Instagram.svg';
-import twitter from './Twitter.svg';
 
 import './Footer.css';
+import SocialMedia from '../SocialMedia/SocialMedia';
 
 class Footer extends Component {
   render() {
@@ -59,14 +57,8 @@ class Footer extends Component {
               </li>
             </ul>
           </nav>
-          <div className="Footer__social-media">
-              <img src={twitter} className="Footer__sm-icon" alt="Twitter Icon" />
-              <img src={facebook} className="Footer__sm-icon" alt="Facebook Icon" />
-              <img src={instagram} className="Footer__sm-icon" alt="Instagram Icon" />
-            </div>
-          
+         <SocialMedia />
         </div>
-
        </div>
     );
   }

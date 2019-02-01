@@ -2,8 +2,10 @@ import React from 'react';
 import logo from './surelogo_blue.svg';
 
 import './MobileMenu.css';
+import Navigation from '../Navigation/Navigation';
+import SocialMedia from '../SocialMedia/SocialMedia';
 
-const MobileMenu = ({toggleMenu}) => (
+const MobileMenu = ({toggleMenu, menus}) => (
     <header className="MobileMenu">
         <header className="MobileMenu__header">
         <div className="MobileMenu__logo">
@@ -15,29 +17,8 @@ const MobileMenu = ({toggleMenu}) => (
           </i>
         </div>
         </header>
-        <nav className="MobileMenu__nav nav">
-            <ul className="Mobilemenu__nav-list">
-                <li className="nav__item nav__item_dropdown">
-                    <a href="/" className="nav__link">Products</a>
-                    <i className="nav__dropdown-icon_mobile-menu material-icons">arrow_drop_down</i>
-                </li>
-                <li className="nav__item">
-                    <a href="/" className="nav__link">Support</a>
-                </li>
-                <li className="nav__item">
-                    <a href="/" className="nav__link">Claims</a>
-                </li>
-                <li className="nav__item">
-                    <a href="/" className="nav__link">Download App</a>
-                </li>
-                <li className="nav__item">
-                    <a href="/" className="nav__link">Login</a>
-                </li>
-                <li className="nav__item nav__item_button-style">
-                    <a href="/" className="nav__link">Sign Up</a>
-                </li>
-            </ul>
-        </nav>
+        <Navigation menus={menus} isDesktop={false} />
+        <SocialMedia />
     </header>
 );
 

@@ -9,6 +9,7 @@ import Policies from '../Policies/Policies';
 import Contact from '../Contact/Contact';
 import Footer from '../Footer/Footer';
 import MobileMenu from '../MobileMenu/MobileMenu';
+import menus from '../data/menus';
 
  class LandingPage extends Component {
   constructor(props) {
@@ -30,7 +31,7 @@ import MobileMenu from '../MobileMenu/MobileMenu';
     if (this.state.openMobileMenu) {
       return (
         <div className="LandingPage">
-            <MobileMenu toggleMenu={this.toggleMenu} />
+            <MobileMenu toggleMenu={this.toggleMenu} menus={menus} />
         </div>
       );
     }
