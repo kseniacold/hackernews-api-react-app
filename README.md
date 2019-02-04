@@ -6,7 +6,7 @@ __Live URL:__ [http://hnr.kseniacodes.com](http://hnr.kseniacodes.com)
 
 __Hacker News Reader__ is a `React.js` app for displaying HackerNews feed:
 
-* __Hacker News Reader__ is a feed reader. It fetches from [the Hacker News APIs](https://github.com/HackerNews/API) and allows to view 100 top stories and to bookmark them.
+* __Hacker News Reader__ is a feed reader. It fetches the news from [the Hacker News APIs](https://github.com/HackerNews/API) and allows to view 100 top stories and to bookmark them.
 The project shows the basic patterns of React application state management using [Redux.js](https://redux.js.org/).
 The project is bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
